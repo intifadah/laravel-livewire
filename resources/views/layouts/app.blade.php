@@ -43,8 +43,9 @@
               class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('todo-list')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">TodoList</a>
             <a href="/cascading-dropdown"
               class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('cascading-dropdown')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Cascading</a>
-            <a href="/products" class="py-4 px-2 text-gray-500 font-semibold" {{ (request()->is('products')) ?
-              'border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Products</a>
+            <a href="/products" class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('products')) ?
+              'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300'
+              }}">Products</a>
             <a href="/image-upload"
               class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('image-upload')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Image</a>
           </div>
