@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/counter', function () {
     return view('welcome');
 })->name('counter');
+
+Route::get('/calculator', \App\Http\Livewire\Calculator::class)->name('calculator');

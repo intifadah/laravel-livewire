@@ -28,7 +28,7 @@
         <div class="flex space-x-7">
           <div>
             <!-- Website Logo -->
-            <a href="#" class="flex items-center py-4 px-2">
+            <a href="{{config('app.url')}}" class="flex items-center py-4 px-2">
               <img src="favicon.ico" alt="Logo" class="h-8 w-8 mr-2">
               <span class="font-semibold text-gray-500 text-lg">{{config('app.name')}}</span>
             </a>
@@ -36,18 +36,17 @@
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
             <a href="/counter"
-              class="py-4 px-2 text-green-500 font-semibold {{ (Route::is('counter') || Route::is('welcome')) ? ' border-b-4 border-green-500' : '' }}">Counter</a>
+              class="py-4 px-2 text-gray-500 font-semibold {{ (Route::is('counter') || Route::is('welcome')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Counter</a>
             <a href="/calculator"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ (request()->is('calculator')) ? 'bg-slate-800' : '' }}">Calculator</a>
+              class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('calculator')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Calculator</a>
             <a href="/todo-list"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ (request()->is('todo-list')) ? 'bg-slate-800' : '' }}">TodoList</a>
+              class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('todo-list')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">TodoList</a>
             <a href="/cascading-dropdown"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ (request()->is('cascading-dropdown')) ? 'bg-slate-800' : '' }}">Cascading</a>
-            <a href="/products"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" {{
-              (request()->is('products')) ? 'bg-slate-800' : '' }}">Products</a>
+              class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('cascading-dropdown')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Cascading</a>
+            <a href="/products" class="py-4 px-2 text-gray-500 font-semibold" {{ (request()->is('products')) ?
+              'border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Products</a>
             <a href="/image-upload"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ (request()->is('image-upload')) ? 'bg-slate-800' : '' }}">Image</a>
+              class="py-4 px-2 text-gray-500 font-semibold {{ (request()->is('image-upload')) ? 'text-green-500 border-b-4 border-green-500' : 'hover:text-green-500 transition duration-300' }}">Image</a>
           </div>
         </div>
         <!-- Secondary Navbar items -->
@@ -57,7 +56,7 @@
             In</a>
           <a href="register"
             class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300" {{
-            (request()->is('register')) ? 'bg-slate-800' : '' }}">Sign Up</a>
+            (request()->is('register')) ? 'border-b-4 border-green-500' : '' }}">Sign Up</a>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
