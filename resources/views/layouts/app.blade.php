@@ -10,7 +10,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+  <link href="./build/assets/app.782f7884.css" rel="stylesheet">
+  <script src="./build/assets/app.61544c3a.js"></script>
 
   <livewire:styles />
   <style>
